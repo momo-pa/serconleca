@@ -1,0 +1,963 @@
+/* Estilos de fuentes */
+
+@font-face {
+  font-family: "Montserrat Black";
+  src: url("fonts/Montserrat-Black.ttf");
+}
+
+@font-face {
+  font-family: "Montserrat Bold";
+  src: url(fonts/Montserrat-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Montserrat Medium";
+  src: url(fonts/Montserrat-Medium.ttf);
+}
+
+
+@font-face {
+  font-family: "Montserrat Regular";
+  src: url(fonts/Montserrat-Regular.ttf);
+}
+
+
+
+h1 {
+  font-family: 'Montserrat Black', sans-serif;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: 'Montserrat Bold', sans-serif;
+}
+
+p, li {
+  font-family: 'Montserrat Regular', sans-serif;
+}
+
+strong {
+  font-family: 'Montserrat Bold', sans-serif;
+}
+
+a {
+  font-family: 'Montserrat Medium', sans-serif;
+  text-decoration: none;
+}
+
+
+/* Estilos body y container */
+
+body {
+  overflow-x: hidden;
+}
+
+.container {
+  width: 1170px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+section {
+  width: 100vw;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+body {
+  top: 0px !important;
+}
+
+/* estilos del traductor */
+
+div#google_translate_element {
+  width: 60px;
+  height: 60px;
+  font-size: 38px;
+  position: fixed;
+  bottom: 15px;
+  z-index: 100;
+  right: 15px;
+  border-radius: 50%;
+  text-align: center;
+  font-family: sans-serif;
+  background: #719b15;
+  color: #000000;
+}
+
+div#google_translate_element div.goog-te-gadget-simple {
+  border: none;
+  background-color: transparent;
+  /*background-color: #17548d;*/ /*#e3e3ff*/
+}
+
+div#google_translate_element div.goog-te-gadget-simple a.goog-te-menu-value:hover {
+  text-decoration: none;
+}
+
+div#google_translate_element div.goog-te-gadget-simple a.goog-te-menu-value span {
+  color: #aaa;
+}
+
+div#google_translate_element div.goog-te-gadget-simple a.goog-te-menu-value span:hover {
+  color: white;
+}
+
+.goog-te-gadget-icon {
+  display: none !important;
+  /*background: url("url for the icon") 0 0 no-repeat !important;*/
+}
+
+/* Remove the down arrow */
+/* when dropdown open */
+div#google_translate_element div.goog-te-gadget-simple a.goog-te-menu-value span[style="color: rgb(213, 213, 213);"] {
+  display: none;
+}
+/* after clicked/touched */
+div#google_translate_element div.goog-te-gadget-simple a.goog-te-menu-value span[style="color: rgb(118, 118, 118);"] {
+  display: none;
+}
+/* on page load (not yet touched or clicked) */
+div#google_translate_element div.goog-te-gadget-simple a.goog-te-menu-value span[style="color: rgb(155, 155, 155);"] {
+  display: none;
+}
+
+/* Remove span with left border line | (next to the arrow) in Chrome & Firefox */
+div#google_translate_element div.goog-te-gadget-simple a.goog-te-menu-value span[style="border-left: 1px solid rgb(187, 187, 187);"] {
+  display: none;
+}
+/* Remove span with left border line | (next to the arrow) in Edge & IE11 */
+div#google_translate_element div.goog-te-gadget-simple a.goog-te-menu-value span[style="border-left-color: rgb(187, 187, 187); border-left-width: 1px; border-left-style: solid;"] {
+  display: none;
+}
+/* HIDE the google translate toolbar */
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+body {
+  top: 0px !important;
+}
+
+/* Estilos del menu principal */
+
+.menu-principal {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: calc(18px*7);
+  background: none;
+  transition: all 0.5s ease-in-out;
+  z-index: 100;
+}
+
+
+.menu-principal.scroll {
+  height: calc(18px*4);
+  background: white;
+  transition: all 0.5s ease-in-out;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.02);
+}
+
+.menu-principal > .container {
+  height: 100%;
+  display: grid;
+  grid-template-areas: "logo botones";
+  grid-template-columns: 255px 1fr;
+  grid-template-rows: 100%;
+}
+
+.menu-principal .logo-menu {
+  grid-area: logo;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.menu-principal .logo-menu a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-principal .logo-menu img {
+  height: 70%;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-principal .botones-menu {
+  grid-area: botones;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.menu-principal .botones-menu ul {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 0.5em;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.menu-principal .botones-menu li:not(:last-child) {
+  margin-right: 2em;
+}
+
+.menu-principal .botones-menu a {
+  color: #ffffff;
+  text-transform: uppercase;
+  padding: 0.5em;
+  transition: all 0.5s ease-in-out;
+  font-family: 'Montserrat Bold';
+}
+
+.menu-principal.scroll .botones-menu a {
+  color: #719b15;
+}
+
+.boton-menu-mobile {
+  display: none;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 50px;
+}
+
+.menu-principal.scroll .boton-menu-mobile {
+  color: #719b15;
+}
+
+
+
+/* Estilos del slider */
+
+
+.slider {
+  width: 100vw;
+  height: calc(100vh + 66px);
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+  -webkit-box-shadow: 0px 0px 74px 1px rgba(0,0,0,0.37);
+    -moz-box-shadow: 0px 0px 74px 1px rgba(0,0,0,0.37);
+    box-shadow: 0px 0px 74px 1px rgba(0,0,0,0.37);
+}
+
+.slider > .container-full {
+  width: 100vw;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 100vw);
+}
+
+.slider > div > div {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.servicios-slider {
+  background: url(img/servicios-petroleros.jpg);
+}
+
+.obras-slider {
+  background: url(img/obras-civiles.jpg);
+}
+
+.saneamiento-slider {
+  background: url(img/saneamiento-ambiental.jpg);
+}
+
+.mantenimiento-slider {
+  background: url(img/mantenimiento-lineas.jpg);
+}
+
+.conexionado-slider {
+  background: url(img/conexionado-pozos.jpg);
+}
+
+.slider > div > div > .content > .margen-menu {
+  width: 100%;
+  height: calc(18px*7);
+}
+
+.slider > div > div > .content {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  box-shadow: inset 1px 1px 180px #000000;
+}
+
+.slider .container {
+  height: calc(100% - 128px);
+  display: grid;
+  grid-template-columns: 43% 57%;
+}
+
+.slider .container .mini-galeria {
+  display: grid;
+  align-self: flex-end;
+  margin-bottom: 80px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 160px;
+  grid-gap: 20px;  
+  object-fit: cover;
+}
+
+.slider .container .mini-galeria img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.07), 0 4px 8px rgba(0,0,0,0.07), 0 8px 16px rgba(0,0,0,0.07), 0 16px 32px rgba(0,0,0,0.07), 0 32px 64px rgba(0,0,0,0.07);
+}
+
+.slider .text-content {
+  width: 470px;
+  padding-bottom: 100px;
+  height: auto;
+  align-self: center;
+}
+
+.slider h1 {
+  color: #ffffff;
+  font-size: 44px;
+  letter-spacing: 1px;
+  line-height: 1.2em;
+  text-shadow: 5px 5px 20px rgba(0, 0, 0, 0.7);
+}
+
+/* Estilos de la descripcion */
+
+section.descripcion {
+  position: static;
+  z-index: -1;
+  background: #719b15;
+  margin-top: -66px;
+  padding-bottom: 100px;
+}
+
+section.descripcion {
+  -webkit-box-shadow: inset 0px 0px 74px 1px rgba(0,0,0,0.37);
+    -moz-box-shadow: inset 0px 0px 74px 1px rgba(0,0,0,0.37);
+    box-shadow: inset 0px 0px 74px 1px rgba(0,0,0,0.37);
+}
+
+.titulo-descripcion {
+  position: relative;
+  z-index: 2;
+  margin: 0 auto;
+  width: 75%;
+  background: #ffffff;
+  color: #719b15;
+  font-size: 44px;
+  padding: 1em;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 0px 74px 1px rgba(0,0,0,0.37);
+  -moz-box-shadow: 0px 0px 74px 1px rgba(0,0,0,0.37);
+  box-shadow: 0px 0px 74px 1px rgba(0,0,0,0.37);
+}
+
+.contenido-descripcion {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 80px;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.parrafo-descripcion {
+  height: fit-content;
+  color: #719b15;
+  background: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 0px 74px 1px rgba(0,0,0,0.37);
+    -moz-box-shadow: 0px 0px 74px 1px rgba(0,0,0,0.37);
+    box-shadow: 0px 0px 74px 1px rgba(0,0,0,0.37);
+}
+
+.parrafo-descripcion p {
+  font-family: 'Montserrat Medium';
+  line-height: 1.15em;
+  text-align: center;
+  margin: 1.25em;
+}
+
+section.descripcion img {
+  width: 100%;
+}
+
+.imagen-descripcion {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.parrafo-servicios {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.parrafo-servicios ul {
+  list-style: disc inside;
+}
+
+.parrafo-servicios li {
+  margin-bottom: 1.5em;
+}
+
+
+.parrafo-servicios h2 {
+  font-size: 28px;
+  margin-bottom: 2em;
+  text-transform: uppercase;
+}
+
+
+.parrafo-servicios li p {
+  display: inline;
+  font-family: 'Montserrat Medium';
+  line-height: 1.5em;
+}
+
+/* Estilos de Mision y Vision */
+
+.mision-vision {
+  padding: 100px 0;
+}
+
+.mision-vision .container {
+  display: grid;
+  grid-template-areas: "misionP misionF"
+                       "visionF visionP";
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  grid-gap: 80px;
+}
+
+.mision {
+  grid-area: misionP;
+}
+
+.mision-foto {
+  grid-area: misionF;
+}
+
+.vision {
+  grid-area: visionP;
+}
+
+.vision-foto {
+  grid-area: visionF;
+}
+
+.mision-foto img {
+  width: 100%;
+}
+
+.vision-foto img {
+  width: 100%;
+}
+
+.mision-vision h2 {
+  color: #719b15;
+  font-size: 44px;
+  margin-bottom: 0.75em;
+}
+
+.mision-vision p {
+  line-height: 1.5em;
+  font-size: 20px;
+}
+
+.mision-vision .mision ul {
+  list-style: disc inside;
+}
+
+.mision-vision li p {
+  display: inline;
+}
+
+.mision-vision .mision li {
+  margin-bottom: 2.25em;
+}
+
+.mision-vision .vision p {
+  text-indent: 3em;
+}
+/* Estilos de Obras */
+
+section.obras {
+  padding: 100px 0 140px 0;
+  background: #e2e2e2;
+  position: relative;
+}
+
+section.obras::after {
+  content: "";
+  position: absolute;
+  z-index: 5;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 110px;
+  background: url(img/city.svg);
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+section.obras .container {
+  overflow-x: hidden;
+}
+
+.obras .slider-obras {
+  display: flex;
+  width: 300%;
+  flex-direction: row;
+  grid-gap: 45px;
+}
+
+section.obras ul {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 270px);
+  justify-content: space-between;
+  overflow-x: hidden;
+}
+
+.obras .titulo-obras {
+  color: #719b15;
+  font-size: 44px;
+  margin-bottom: 0.75em;
+  text-align: center;
+}
+
+.obras li {
+  position: relative;
+  padding: 1.25em;
+}
+
+.obras h2 {
+  position: sticky;
+  z-index: 2;
+  margin: 0.5em 0;
+  font-size: 20px;
+  color: #719b15;
+}
+
+.obras p {
+  position: sticky;
+  z-index: 2;
+  line-height: 1.5em;
+}
+
+.obras li:after {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: calc(100% - 6px);
+  height: calc(100% - 6px - 45px);
+  border: 3px solid #719b15;
+  border-radius: 10px;
+}
+
+.obras span {
+  z-index: 2;
+  position: sticky;
+  color: #719b15;
+  background: #e2e2e2;
+  padding: 0px 0.25em;
+  font-size: 50px;
+}
+
+.botones {
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.botones .boton {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border: 3px solid #719b15;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.botones .boton:not(:last-child) {
+  margin-right: 15px;
+}
+
+.botones .boton.active {
+  background: #719b15;
+}
+
+/* Estilos de Junta */
+
+section.junta {
+  padding-top: 100px;
+}
+
+.junta .titulo-junta {
+  font-size: 44px;
+  color: #719b15;
+  margin-bottom: 0.75em;
+  text-align: center;
+}
+
+
+.junta .personas-junta {
+  padding: 1.25em;  
+  border: 3px solid #719b15;
+  border-radius: 10px;
+}
+
+.personas-junta span, .personas-junta strong {
+  color: #719b15;
+}
+
+/* Estilos de Sedes */
+
+section.sedes {
+  padding: 100px 0
+}
+
+.sedes .titulo-sedes {
+  grid-area: titulo;
+  font-size: 44px;
+  color: #719b15;
+  text-align: center;
+}
+
+.sedes .container {
+  display: grid;
+  grid-template-areas: "titulo titulo"
+                       "venezuela venezuela"
+                       "panama usa"
+                       "oficinas oficinas";
+  grid-gap: 50px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.sede.panama {
+  grid-area: panama;
+}
+
+.sede.venezuela {
+  grid-area: venezuela;
+}
+
+.sede.usa {
+  grid-area: usa;
+}
+
+.sede.oficinas {
+  grid-area: oficinas;
+  text-align: center;
+}
+
+.sede.oficinas img {
+  width: 50px;
+}
+
+.sede {
+  position: relative;
+  padding: 1.25em;
+  display: grid;
+  grid-template-areas: "bandera titulo"
+                       "datos datos";
+  grid-template-columns: 80px 1fr;
+  grid-template-rows: 50px 1fr;
+}
+
+
+.sede:after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: calc(100% - 6px);
+  height: calc(100% - 6px - 45px);
+  border: 3px solid #719b15;
+  border-radius: 10px;
+}
+
+.sede .bandera {
+  grid-area: bandera;
+  width: 50px;
+  position: sticky;
+  background: #ffffff;
+  padding: 0 15px;
+}
+
+.sede .titulo {
+  grid-area: titulo;
+  display: flex;
+  align-items: center;
+}
+
+.sede h2 {
+  font-size: 25px;
+  color: #719b15;
+  position: sticky;
+  padding-right: 15px;
+  background: #ffffff;
+}
+
+.sede span {
+  color: #719b15;
+}
+
+.sede ul {
+  grid-area: datos;
+  margin-top: 0.75em;
+  line-height: 2em;
+}
+
+.sede ul li iframe {
+  width: 100%;
+  margin-bottom: -12px;
+  border-radius: 0 0 10px 10px;
+}
+
+.sede strong {
+  color: #719b15;
+}
+
+/* Estilos de Contacto */
+
+section.contacto {
+  padding-bottom: 100px;
+}
+
+.contacto h2 {
+  font-size: 44px;
+  text-align: center;
+  margin-bottom: 0.75em;
+  color: #719b15;
+}
+
+.contacto .numeros {
+  font-size: 22px;
+  color: #719b15;
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+
+.formulario-bienvenidos .importante {
+  margin-top: 1em;
+  font-size: 14px;
+  margin-bottom: 2em;
+}
+
+.input-form {
+  width: calc(100% - 44px);
+  padding: 20px;
+  margin-bottom: 25px;
+  background: transparent;
+  border: 2px solid #719b15;
+  font-family: 'Montserrat Regular', sans-serif;
+  font-size: 18px;
+}
+
+
+textarea {
+  resize: none;
+}
+
+.submit-form {
+  width: 100%;
+  font-family: 'Montserrat Bold';
+  margin-bottom: 1em;
+  color: #ffffff;
+  background: #719b15;
+  font-size: 18px;
+  padding: 18px;
+  border-radius: 6px;
+  border: none;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+
+.submit-form:hover {
+  background: #2b2b2b; 
+}
+
+
+
+@media (max-width: 1200px) {
+  .container {
+    width: 970px;
+  }
+
+  
+  .menu-principal .botones-menu li:not(:last-child) {
+    margin-right: 1em;
+  }
+
+  .parrafo-servicios h2 {
+    font-size: 24px;
+
+}
+
+}
+
+@media (max-width: 992px) {
+
+  .container {
+    width: 750px;
+  }
+
+  .slider h1 {
+    font-size: 38px;
+  }
+
+  .menu-principal {
+    height: calc(18px*5);
+  }
+  
+  .menu-principal > .container {
+    grid-template-areas: "boton logo vacio";
+    grid-template-columns: 50px 1fr 50px;
+    grid-template-rows: 100%;
+  }
+
+  
+  .menu-principal .botones-menu li:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .menu-principal.scroll .botones-menu {
+    top: 72px;
+  }
+
+  .menu-principal .botones-menu a {
+    width: 100%;
+    color: #719b15;
+  }
+
+  .menu-principal .botones-menu {
+    background: #ffffff;
+    width: 190px;
+    position: fixed;
+    top: 126px;
+    left: -100%;
+    transition: all 0.5s ease-in-out;
+  }
+
+  
+  .menu-principal .botones-menu.on {
+    left: 0;
+  }
+
+  .menu-principal.scroll .botones-menu {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.02);
+  }
+
+  .menu-principal .botones-menu ul {
+    width: 100%;
+    flex-direction: column;
+    padding-bottom: 0;
+  }
+
+  .boton-menu-mobile {  
+    display: flex;
+    align-items: center;
+  }
+
+  .menu-principal .botones-menu li:not(:last-child) {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .menu-principal .botones-menu li {
+    width: calc(100% - 10px);
+    padding-left: 10px;
+    border-bottom: 3px solid #719b15;
+  }
+
+  .menu-principal .botones-menu li a {
+    display: inline-block;
+    width: 100%;
+    padding: 15px 0;
+  }
+
+  .contenido-descripcion {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  section.obras ul {
+    grid-template-columns: 270px;
+    grid-template-rows: repeat(3, auto);
+    justify-content: space-around;
+  }
+
+  .mision-vision .container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "misionP"
+                         "misionF"
+                         "visionP"
+                         "visionF";
+    grid-gap: 80px;
+  }
+
+  .sedes .container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas:
+        "titulo"
+        "venezuela"
+        "panama"
+        "usa" 
+        "oficinas";
+  }
+
+}
+
+@media (max-width: 780px) {
+  .container {
+    width: calc(100% - 50px)
+  }
+
+  .titulo-descripcion {
+    font-size: 6vw;
+  }
+
+  .slider .text-content {
+    width: 100%;
+  }
+
+  .slider h1 {
+    font-size: 32px;
+  }
+
+  .slider .container {
+    grid-template-columns: 100%;
+    grid-template-rows: 80% 20%;
+  }
+
+}
